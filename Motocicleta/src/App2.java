@@ -1,8 +1,24 @@
 import java.awt.Color;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Scanner;
-public class App1 {
+public class App2 {
     public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
+        ArrayList<Motocicleta> motos = new ArrayList<>();
+        motos.add(new Motocicleta(Color.BLACK, 4, 180, false));
+        motos.add(new Motocicleta(Color.RED, 2, 160, true));    
+        motos.add(new Motocicleta(Color.BLUE, 6, 200, false));
+        motos.add(new Motocicleta(new Color(128,128,0), 1, 120, true));
+        motos.add(new Motocicleta(new Color(0,128,0), 4, 140, false));
+        motos.add(new Motocicleta(new Color(255,0,255), 3, 150, true));
+        motos.add(new Motocicleta(new Color(255,255,0), 5, 190, false));
+        motos.add(new Motocicleta(new Color(0,255,255), 2, 170, true));
+        motos.add(new Motocicleta(new Color(128,0,128), 4   , 160, false));
+        motos.add(new Motocicleta(new Color(0,128,128), 6, 210, true));
+            for (Motocicleta moto : motos) {
+                System.out.println(moto);
+            }
+        /*Scanner sc = new Scanner(System.in);
         Motocicleta[] motos = new Motocicleta [2];
         int cilindros;
         int velocidadMaxima;    
@@ -30,7 +46,7 @@ public class App1 {
         for (int i = 0; i < motos.length; i++) {
             System.out.println(motos[i]);
         } 
-        sc.close();
+        sc.close();*/
         /*motos[0] = new Motocicleta(Color.BLACK, 4, 180, false);
         motos[1] = new Motocicleta(Color.RED, 2, 160, true);
         motos[2] = new Motocicleta(Color.BLUE, 6, 200, false);
